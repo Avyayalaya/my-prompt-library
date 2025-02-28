@@ -1,3 +1,16 @@
+
+---
+
+## **How to Use This Master Prompt**
+
+1. **Domain Choice**: At **SECTION_A**, you specify the domain/topic you want to explore in depth (e.g., “Fusion Energy,” “Advanced Robotics,” “Cryptocurrency Regulation,” etc.).  
+2. **Step-by-Step Iteration**: You feed each section’s **instructions** (plus the stored output from the previous section) to your LLM. The model’s response gets stored (e.g., `outputA`, `outputB`, …), which you feed into the **next** prompt.  
+3. **Mid-Chain Revisits**: If a major piece of data emerges in the middle (e.g., a new regulation or technical paper), you can jump back to the relevant section to **revise** the assumptions.  
+4. **Non-Linear Encouragement**: The chain is still **somewhat sequential** for clarity, but you’re free to **circle back** to any prompt if it improves the final results.  
+
+This template ensures a **comprehensive exploration** of **any** complex topic, spanning from **basic fundamentals** and **ecosystem analysis** to **talent, ethics, synergy, policy, investment** rationales, and culminating in **multi-level summaries** for different audiences.
+
+
 ```xml
 <ai-chained-prompts>
 
