@@ -1,0 +1,210 @@
+```xml
+<ai-chained-prompts>
+
+  <!-- 
+    This chain is designed for ANY complex topic (referred to here as 'Domain/Topic').
+    Each step references the output of the previous, but you can also revisit earlier steps
+    if new information arises or you want deeper exploration.
+  -->
+
+  <prompt id="SECTION_A">
+    <title>Intro & Basic Goals</title>
+    <instructions>
+      <![CDATA[
+      1. Ask the user to specify the Domain/Topic (e.g., "Fusion Energy," "Brain-Computer Interfaces," etc.).
+      2. Provide a high-level introduction to that Domain/Topic:
+         - Broad overview
+         - Historical context
+         - Why it's important or potentially disruptive
+      3. Summarize the overarching goals for our exploration:
+         - Fundamentals & layered ecosystem
+         - Key players & 'skeptical roadmap' checks
+         - Cross-layer disruptions & scenario planning
+         - Synergy with comparable or competing technologies
+         - Market/user adoption readiness
+         - Talent, ethics & wildcard exploration
+         - Policy & region-specific angles
+         - Major challenge forks (if a central technical/scientific hurdle is or isn't solved)
+         - Investment or strategic rationale
+         - Ongoing learning plan with real-time updates
+         - Multi-level executive summaries
+      4. Store the response in "outputA".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_B</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_B">
+    <title>Fundamentals & Layered Ecosystem</title>
+    <instructions>
+      <![CDATA[
+      1. Use "outputA" as context. 
+      2. Provide an in-depth breakdown of the Domain/Topic fundamentals:
+         - Key scientific/technical principles
+         - Terminologies, core concepts
+         - Notable sub-fields or variants
+      3. Present a 'layered ecosystem' or 'value chain' perspective:
+         - Foundational enablers (materials, data, essential physics or math)
+         - Core technology/hardware layers
+         - Control/management or integration layers
+         - Software/frameworks/operational layers
+         - End-user applications or industries
+         - Cross-layer dependencies
+      4. Mention potential synergy with OR threat from alternative or rival technologies.
+      5. Wait for a complete response, then store in "outputB".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_C</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_C">
+    <title>Key Players & Skeptical Roadmap</title>
+    <instructions>
+      <![CDATA[
+      1. Use "outputB" (ecosystem) to identify major organizations, companies, labs, or consortia in this Domain/Topic.
+      2. For each player:
+         - Unique value, public/private status, approximate valuations if known
+         - Roadmap or milestone claims (assess track record realistically, referencing past misses or marketing spin)
+         - Moats or differentiators
+         - Major risks or controversies
+      3. Include relevant links, references, or sources for further reading.
+      4. Store the output in "outputC".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_D</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_D">
+    <title>Cross-Layer Disruptions & Scenario Planning</title>
+    <instructions>
+      <![CDATA[
+      1. Using "outputC":
+         - Identify potential breakthroughs, bottlenecks, or disruptions (technical, resource, funding).
+         - Explore how these might ripple across the layers or stakeholders.
+      2. Propose an initial scenario framework (e.g., slow vs. rapid progress, high vs. low adoption).
+      3. Provide recommended strategic actions for each scenario.
+      4. Wait for a complete response and store in "outputD".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_E</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_E">
+    <title>Synergy with Comparable or Competing Technologies</title>
+    <instructions>
+      <![CDATA[
+      1. From "outputD" (scenarios), compare the Domain/Topic with other relevant fields or tech:
+         - Potential synergy or complementary usage
+         - Threat of overshadowing from a faster-growing alternative
+         - Key performance metrics or cost comparisons
+      2. Summarize how this synergy or competition could shift the domain's roadmap or scenario outcomes.
+      3. Store the new response in "outputE".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_F</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_F">
+    <title>Market/User Adoption Readiness</title>
+    <instructions>
+      <![CDATA[
+      1. Use "outputE" to assess:
+         - Who the end-users are (industries, governments, consumers)
+         - Actual ROI thresholds, regulatory hurdles, compliance, switching costs
+         - How adoption might occur if partial solutions become available before 'full maturity'
+      2. Provide timeline guesses or triggers that might accelerate or decelerate adoption.
+      3. Store the result in "outputF".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_G</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_G">
+    <title>Talent, Ethics & Wildcard Brainstorm</title>
+    <instructions>
+      <![CDATA[
+      1. Using "outputF" (market readiness) as context:
+         - Assess talent/education constraints (number of qualified experts, skill gaps).
+         - Explore ethical or societal issues (potential misuse, environmental impact, data privacy).
+         - Present wildcard prompts: "What angles have we overlooked or underexplored?"
+      2. Wait for a complete response, store in "outputG".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_H</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_H">
+    <title>Policy & Region-Specific Angles</title>
+    <instructions>
+      <![CDATA[
+      1. From "outputG" (talent & ethics), detail how government or regional policies shape the domain:
+         - Funding programs, security restrictions, standardization efforts, trade regulations
+         - Region-specific priorities (e.g., US vs. EU vs. Asia)
+      2. Cite major policy or legislative documents for reference.
+      3. Store output in "outputH".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_I</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_I">
+    <title>Major Challenge Fork: If/When the Central Technical Hurdle Is or Isn't Solved</title>
+    <instructions>
+      <![CDATA[
+      1. Identify the domain’s biggest challenge (e.g., a crucial engineering barrier or scientific puzzle).
+      2. Outline two parallel tracks:
+         - Track 1: This hurdle is solved or significantly mitigated
+         - Track 2: The hurdle remains unsolved or only partially addressed
+      3. Show how scenario outcomes, adoption, or policy might differ for each track.
+      4. Store in "outputI".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_J</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_J">
+    <title>Investment or Strategic Rationale</title>
+    <instructions>
+      <![CDATA[
+      1. Using "outputI" (major challenge fork) + previous context:
+         - Craft a refined investment or strategic roadmap, factoring in synergy, policy, user readiness, talent, ethics, etc.
+         - Provide possible ROI timelines and risk distributions
+         - Summarize near-term vs. long-term prospects for different stakeholders (startups, incumbents, governments)
+      2. Wait and store in "outputJ".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_K</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_K">
+    <title>Ongoing Learning Plan & Real-Time Data Aggregation</title>
+    <instructions>
+      <![CDATA[
+      1. From "outputJ" (strategy rationale), propose a plan for:
+         - Regular scanning of new papers, press releases, policy changes
+         - Setting up aggregator tools or watch-lists for domain developments
+         - Periodic re-check of each previous section (A–J) when new data emerges
+      2. Wait and store in "outputK".
+      ]]>
+    </instructions>
+    <nextPrompt>SECTION_L</nextPrompt>
+  </prompt>
+
+  <prompt id="SECTION_L">
+    <title>Multi-Level Summaries & Final Recap</title>
+    <instructions>
+      <![CDATA[
+      1. From "outputK":
+         - Generate multiple summaries:
+           (a) ~6-page deep-dive for domain-savvy stakeholders
+           (b) 2-page high-level summary for executives
+           (c) 1-paragraph teaser with disclaimers about complexities
+      2. Provide an optional "Final Check" prompt: 
+         - "If new data arises, which sections should we revisit first?"
+      3. End chain after storing the final result in "outputL".
+      ]]>
+    </instructions>
+    <nextPrompt>NONE</nextPrompt>
+  </prompt>
+
+</ai-chained-prompts>
