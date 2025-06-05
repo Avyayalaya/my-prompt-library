@@ -210,9 +210,9 @@ This template ensures a **comprehensive exploration** of **any** complex topic, 
       <![CDATA[
       1. From "outputK":
          - Generate multiple summaries:
-           (a) ~6-page deep-dive for domain-savvy stakeholders
-           (b) 2-page high-level summary for executives
-           (c) 1-paragraph teaser with disclaimers about complexities
+           (a) ~12-page deep-dive for domain-savvy stakeholders
+           (b) 3-page high-level summary for executives
+           (c) 2-paragraph teaser with disclaimers about complexities
       2. Provide an optional "Final Check" prompt: 
          - "If new data arises, which sections should we revisit first?"
       3. End chain after storing the final result in "outputL".
